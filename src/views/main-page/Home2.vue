@@ -2,31 +2,12 @@
   <div class="layout">
     <Layout>
       <Header>
-        <Menu
-          mode="horizontal"
-          theme="dark"
-          active-name="1"
-        >
-          <div class="layout-logo"></div>
+        <Menu mode="horizontal" theme="dark" active-name="1">
+          <div class="layout-logo"><a>首页</a></div>
           <div class="layout-nav">
-            <!-- <MenuItem name="1">
-            <Icon type="ios-navigate"></Icon>
-            1
-            </MenuItem>
-            <MenuItem name="2">
-            <Icon type="ios-keypad"></Icon>
-            Item 2
-            </MenuItem>
-            <MenuItem name="3">
-            <Icon type="ios-analytics"></Icon>
-            
-            </MenuItem> -->
-            <MenuItem
-              name="4"
-              style="{align='left'}"
-            >
-            <Icon type="ios-paper"></Icon>
-            个人中心
+            <MenuItem name="1">
+              <Icon type="ios-paper"></Icon>
+              个人中心
             </MenuItem>
           </div>
         </Menu>
@@ -39,12 +20,11 @@
             <BreadcrumbItem>Layout</BreadcrumbItem>
           </Breadcrumb>
         </div>
-        <Content :style="{padding: '0px 0', minHeight: '280px', background: 'blue'}">
+        <Content
+          :style="{padding: '0px 0', minHeight: '280px', background: 'blue'}"
+        >
           <Layout>
-            <Sider
-              hide-trigger
-              :style="{background: '#fff'}"
-            >
+            <Sider hide-trigger :style="{background: '#fff'}">
               <Menu
                 active-name="1-2"
                 theme="dark"
@@ -78,8 +58,11 @@
                 </Submenu>
               </Menu>
             </Sider>
-            <Content :style="{padding: '0px', minHeight: '280px', background: '#fff'}">
-              <carousel-con />
+            <Content
+              :style="{padding: '0px', minHeight: '280px', background: '#fff'}"
+            >
+              <!-- <carousel-con /> -->
+              <router-view></router-view>
             </Content>
           </Layout>
         </Content>
@@ -89,42 +72,56 @@
   </div>
 </template>
 <script>
-import CarouselCon from "@/components/CarouselCon.vue";
-export default {
-  name: "home2",
-  components: {
-    CarouselCon
-  }
-};
+  // import CarouselCon from "@/components/CarouselCon.vue";
+  export default {
+    name: "home2",
+    components: {}
+  };
 </script>
 
 <style scoped>
-.layout {
-  border: 1px solid #d7dde4;
-  background: #f5f7f9;
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.layout-logo {
-  width: 100px;
-  height: 30px;
-  background: #5b6270;
-  border-radius: 3px;
-  float: left;
-  position: relative;
-  top: 15px;
-  left: 20px;
-}
-.layout-nav {
-  width: 420px;
-  margin: 0 auto;
-  margin-right: 20px;
-}
-.layout-sider {
-  width: 100%;
-}
-.layout-footer-center {
-  text-align: center;
-}
+  .layout {
+    border: 1px solid #d7dde4;
+    background: #f5f7f9;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .ivu-menu-vertical {
+    height: 700px;
+  }
+  .ivu-layout-header {
+    padding: 0 20px;
+  }
+  .layout-logo {
+    width: 100px;
+    height: 30px;
+    background: #5b6270;
+    border-radius: 3px;
+    line-height: 30px; /*让黄色div中的文字内容垂直居中*/
+    text-align: center; /*让文字水平居中*/
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    font-size: 20px;
+  }
+  .layout-logo > a {
+    color: #f5f7f9;
+  }
+
+  .layout-nav {
+    width: 120px;
+    margin: 0 auto;
+    margin-right: 20px;
+    float: right;
+  }
+
+  .layout-sider {
+    width: 100%;
+  }
+
+  .layout-footer-center {
+    text-align: center;
+  }
 </style>
