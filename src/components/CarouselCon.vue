@@ -24,8 +24,11 @@
   };
 </script>
 <style lang="less">
-  .demo-carcon .ivu-carousel-list .demo-carousel {
+  .demo-carcon .ivu-carousel-list {
     width: 100%;
     height: 100%;
+  }
+  .demo-carousel {
+    height: 700px;
   }
 </style>

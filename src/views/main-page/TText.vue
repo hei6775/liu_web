@@ -32,31 +32,31 @@
         appList: [
           {
             name: "one",
-            title: "看视频",
+            title: "看攻略",
             src: require("@/assets/film-icon.png"),
             link: "videoGallery"
           },
           {
             name: "two",
-            title: "听音乐",
+            title: "看地图",
             src: require("@/assets/music-icon.png"),
             link: ""
           },
           {
             name: "thr",
-            title: "玩游戏",
+            title: "看帮助",
             src: require("@/assets/game-icon.png"),
             link: "games"
           },
           {
             name: "four",
-            title: "看头条",
+            title: "买门票",
             src: require("@/assets/news-icon.png"),
             link: "news"
           },
           {
             name: "fif",
-            title: "侃段子",
+            title: "看简介",
             src: require("@/assets/duanzi-icon.png"),
             link: "jokes"
           }
@@ -136,23 +136,27 @@
     .one {
       width: 300px;
       height: 350px;
+      margin: 30px 60px;
     }
     .two {
-      width: 520px;
-      height: 480px;
+      width: 400px;
+      height: 430px;
+      margin: 10px 20px;
     }
     .thr {
-      width: 480px;
+      width: 430px;
       height: 260px;
+      margin: 18px;
     }
     .four {
       width: 400px;
       height: 200px;
-      align: center;
+      margin: 8px;
     }
     .fif {
       width: 340px;
       height: 200px;
+      margin: 15px;
     }
   }
 </style>

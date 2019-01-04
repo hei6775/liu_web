@@ -17,6 +17,16 @@ const homepage = {
       path: "info",
       name: "info_index",
       component: () => import("@/views/main-page/TText.vue")
+    },
+    {
+      path: "guide",
+      name: "guide_index",
+      component: () => import("@/views/main-page/MMap.vue")
+    },
+    {
+      path: "phase",
+      name: "phase_index",
+      component: () => import("@/views/main-page/Phase.vue")
     }
   ]
 };
