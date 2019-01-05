@@ -66,7 +66,7 @@
                     ><router-link to="/phase">门票购买</router-link></MenuItem
                   >
                   <MenuItem name="3-2" class="sub-con"
-                    ><router-link to="/gonggao">景区公告</router-link></MenuItem
+                    ><router-link to="/tells">景区公告</router-link></MenuItem
                   >
                   <MenuItem name="3-2" class="sub-con"
                     ><router-link to="/help">景区帮助</router-link></MenuItem
@@ -83,7 +83,7 @@
           </Layout>
         </Content>
       </Layout>
-      <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
+      <Footer class="layout-footer-center">2018-2019 &copy; your hei。</Footer>
     </Layout>
   </div>
 </template>

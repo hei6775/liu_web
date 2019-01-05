@@ -27,6 +27,21 @@ const homepage = {
       path: "phase",
       name: "phase_index",
       component: () => import("@/views/main-page/Phase.vue")
+    },
+    {
+      path: "introduce",
+      name: "introduce_index",
+      component: () => import("@/views/main-page/Introduce.vue")
+    },
+    {
+      path: "tells",
+      name: "tells_index",
+      component: () => import("@/views/main-page/Tells.vue")
+    },
+    {
+      path: "show",
+      name: "show_index",
+      component: () => import("@/views/main-page/Show.vue")
     }
   ]
 };

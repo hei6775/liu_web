@@ -19,7 +19,8 @@
         </RadioGroup>
         <br />
         <div class="split-left-piao">
-          <span>张数</span><InputNumber :max="100" v-model="piao"></InputNumber>
+          <span>张数</span>
+          <InputNumber :max="100" v-model="piao"></InputNumber>
         </div>
         <span>总价</span>
         <InputNumber
@@ -35,21 +36,23 @@
             shape="circle"
             icon="ios-arrow-back"
             v-on:click="resetData"
+            size="large"
             >重置</Button
           >
           <Button
             class="split-left-foot-pharse"
             shape="circle"
             icon="ios-arrow-forward"
+            size="large"
             >购买</Button
           >
         </div>
       </div>
       <div slot="right" class="split-pane-right">
         您的订单
-        <div v-for="item in dingdandata">
-          <dingdan :name="item.name" :tele="item."></dingdan>
-        </div>
+        <template v-for="item in dingdans">
+          <dingdan :everyone="item"></dingdan>
+        </template>
       </div>
     </Split>
   </div>
@@ -69,13 +72,16 @@
         split1: 0.5
       };
     },
-    props: ["dingdandata"],
+    props: {
+      dingdans: {}
+    },
     components: {
       dingdan
     },
     computed: {
       calMoney: function() {
         console.log(this.piao);
+        console.log(this.dingdans);
         this.money = this.piao * 80;
       }
     },
@@ -95,8 +101,12 @@
     height: 700px;
     border: 1px solid #dcdee2;
   }
-  .split-pane-left .split-pane-right {
+  .split-pane-left {
     padding: 10px;
+  }
+  .split-pane-right {
+    padding: 10px;
+    font-size: 30px;
   }
   .split-left-name {
     width: 80%;
