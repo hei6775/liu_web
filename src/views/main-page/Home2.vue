@@ -20,7 +20,7 @@
       <Layout :style="{padding: '0 0px'}">
         <div class="breamenu">
           <Breadcrumb :style="{margin: '16px 0'}">
-            <BreadcrumbItem>小姐姐</BreadcrumbItem>
+            <BreadcrumbItem>小哥哥</BreadcrumbItem>
             <BreadcrumbItem>到你的心</BreadcrumbItem>
             <BreadcrumbItem>怎么走</BreadcrumbItem>
           </Breadcrumb>
