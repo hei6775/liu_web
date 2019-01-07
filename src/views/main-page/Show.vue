@@ -20,6 +20,14 @@
       v-bind:src="img4"
       v-on:click="handleChange(4)"
     ></img>
+    <img
+    v-bind:src="img5"
+    v-on:click="handleChange(5)"
+    ></img>
+    <img
+    v-bind:src="img6"
+    v-on:click="handleChange(6)"
+    ></img>
   </div>
 </template>
 
@@ -38,6 +46,8 @@ export default {
       img2: require("@/assets/hai1.jpg"),
       img3: require("@/assets/hai1.jpg"),
       img4: require("@/assets/hai1.jpg"),
+      img5:require("@/assets/hai1.jpg"),
+      img6: require("@/assets/hai1.jpg"),
       imgList: [show_bg1, show_bg2, show_bg3, show_bg4, show_bg5, show_bg6]
     };
   },
@@ -57,6 +67,10 @@ export default {
         this.img3 = this.imgList[temp];
       } else if (i == 4) {
         this.img4 = this.imgList[temp];
+      } else if (i==5 ){
+        this.img5 = this.imgList[temp];
+      } else if (i==6) {
+        this.img6 = this.imgList[temp];
       }
     }
   }
@@ -66,13 +80,14 @@ export default {
 .show-main {
   border: 3px solid slategray;
   margin: 15px;
-  height: 670px;
+  min-height: 700px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 img {
-  width: 50%;
-  min-width: 50%;
+  margin: 20px;
+  width: 28%;
+  border-radius: 20px;
 }
 </style>

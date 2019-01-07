@@ -19,6 +19,7 @@
     "@vue/cli-plugin-eslint": "^3.2.0",
     "@vue/cli-service": "^3.2.0",
     "@vue/eslint-config-standard": "^4.0.0",
+    "axios": "^0.18.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
@@ -26,6 +27,7 @@
     "less-loader": "^4.1.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-axios": "0.0.4",
     "vue-cli-plugin-iview": "^1.0.6",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.28.3"

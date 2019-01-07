@@ -11,60 +11,60 @@
 </template>
 
 <script>
-export default {
-  name: "dingdan",
-  props: {
-    everyone: {
-      type: Object,
-      default: () => ({})
+  export default {
+    name: "dingdan",
+    props: {
+      everyone: {
+        type: Object,
+        default: () => ({})
+      }
     }
-  }
-};
+  };
 </script>
 
 <style scoped>
-.dingdan-main {
-  margin-bottom: 25px;
-}
-.dingdan-pane {
-  margin: 10px;
-  margin-left: 30px;
-  height: 80px;
-  border: 3px solid slategray;
-  border-radius: 8px;
-  font-family: "YouYuan", "KaiTi";
-}
-.dingdan-name {
-  float: left;
-  position: absolute;
-  margin-left: 10px;
-  font-size: 18px;
-}
-.dingdan-tele {
-  float: right;
-  position: absolute;
-  margin-left: 140px;
-  font-size: 18px;
-}
-.dingdan-ttype {
-  float: right;
-  position: absolute;
-  margin-top: 40px;
-  margin-left: 10px;
-  font-size: 18px;
-}
-.dingdan-num {
-  float: left;
-  position: absolute;
-  margin-left: 170px;
-  margin-top: 40px;
-  font-size: 18px;
-}
-.dingdan-money {
-  float: left;
-  position: absolute;
-  margin-left: 310px;
-  margin-top: 40px;
-  font-size: 18px;
-}
+  .dingdan-main {
+    margin-bottom: 25px;
+  }
+  .dingdan-pane {
+    margin: 10px;
+    margin-left: 30px;
+    height: 80px;
+    border: 3px solid slategray;
+    border-radius: 8px;
+    font-family: "YouYuan", "KaiTi";
+  }
+  .dingdan-name {
+    float: left;
+    position: absolute;
+    margin-left: 40px;
+    font-size: 18px;
+  }
+  .dingdan-tele {
+    float: right;
+    position: absolute;
+    margin-left: 360px;
+    font-size: 18px;
+  }
+  .dingdan-ttype {
+    float: right;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 18px;
+  }
+  .dingdan-num {
+    float: left;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  .dingdan-money {
+    float: left;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 40px;
+    font-size: 18px;
+  }
 </style>

@@ -13,9 +13,9 @@
           v-model="usertele"
         />
         <RadioGroup class="split-left-single" v-model="ttype" size="large">
-          <Radio label="old">老人票</Radio>
-          <Radio label="young">成人票</Radio>
-          <Radio label="children">儿童票</Radio>
+          <Radio label="老人票">老人票</Radio>
+          <Radio label="成人票">成人票</Radio>
+          <Radio label="儿童票">儿童票</Radio>
         </RadioGroup>
         <br />
         <div class="split-left-piao">
@@ -44,6 +44,7 @@
             shape="circle"
             icon="ios-arrow-forward"
             size="large"
+            v-on:click="handlephase"
             >购买</Button
           >
         </div>
@@ -69,7 +70,8 @@
         ttype: "",
         money: 0,
         piao: 1,
-        split1: 0.5
+        split1: 0.5,
+        value1: 80
       };
     },
     props: {
@@ -80,17 +82,48 @@
     },
     computed: {
       calMoney: function() {
-        console.log(this.piao);
-        console.log(this.dingdans);
-        this.money = this.piao * 80;
+        if (this.ttype == "老人票") {
+          this.value1 = 60;
+        } else if (this.ttype == "儿童票") {
+          this.value1 = 40;
+        } else {
+          this.value1 = 80;
+        }
+        this.money = this.piao * this.value1;
       }
     },
     methods: {
-      resetData: function(event) {
+      resetData: function() {
         // `this` 在方法里指向当前 Vue 实例
         (this.ttype = ""), (this.piao = 1);
         this.username = "";
         this.usertele = "";
+      },
+      handlephase: function() {
+        if (this.username == "") {
+          this.$Message.error("姓名不能为空");
+          return;
+        }
+        if (this.usertele == "") {
+          this.$Message.error("联系方式不能为空");
+          return;
+        }
+        if (this.ttype == "") {
+          this.$Message.error("门票类型必须选择一项");
+          return;
+        }
+        if (this.piao == "") {
+          this.$Message.error("门票数量不能为0");
+          return;
+        }
+        let newobj = new Object();
+        newobj.name = this.username;
+        newobj.tele = this.usertele;
+        newobj.ttype = this.ttype;
+        newobj.money = this.money;
+        newobj.num = this.piao;
+        console.log(newobj);
+        this.dingdans.push(newobj);
       }
     }
   };
